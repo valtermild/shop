@@ -359,7 +359,8 @@ MongoClient.connect(config.databaseConnectionString, {}, (err, client) => {
     .then(() => {
         // lift the app
         app.emit('appStarted');
-        console.log(colors.green('expressCart running on host: http://localhost:' + app.get('port')));
+        console.log(colors.green('expressCart running on host: http://localhost:' + app.get('port')));    
+        console.log(process.env.port)    
     })
     .catch((err) => {
         console.error(colors.red('Error setting up indexes:' + err));
