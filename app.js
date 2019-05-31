@@ -13,7 +13,7 @@ const colors = require('colors');
 const common = require('./lib/common');
 const mongodbUri = require('mongodb-uri');
 let handlebars = require('express-handlebars');
-
+require('dotenv').config();
 // Validate our settings schema
 const Ajv = require('ajv');
 const ajv = new Ajv({useDefaults: true});
@@ -359,8 +359,7 @@ MongoClient.connect(config.databaseConnectionString, {}, (err, client) => {
     .then(() => {
         // lift the app
         app.emit('appStarted');
-        console.log(colors.green('expressCart running on host: http://localhost:' + app.get('port')));    
-        console.log(process.env.port)    
+        console.log(colors.green('expressCart running on host: http://localhost:' + app.get('port')));            
     })
     .catch((err) => {
         console.error(colors.red('Error setting up indexes:' + err));
