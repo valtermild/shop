@@ -2,7 +2,7 @@
     "cartTitle": "Organic essential oils | The Republic of Crimea| Wholesale Essential Oils",
     "cartDescription": "Wholesale 100% pure organic essential oils from Republic of Crimea",
     "cartLogo": "/uploads/logo_.png",
-    "baseUrl": "http://localhost:1111",
+    "baseUrl": "http://185.139.68.138",
     "emailHost": "smtp-mail.outlook.com",
     "emailPort": 587,
     "emailSecure": false,
