@@ -1,7 +1,7 @@
 {
-    "mode": "sandbox",
-    "client_id": "this_is_not_real",
-    "client_secret": "this_is_not_real",
-    "paypalCartDescription": "BKLYN",
+    "mode": "live",
+    "client_id": "AXqaZBp4oyrch8o82K9iOfqxDAyMbJScD2IhIpTgiti9WuCXzHkQs61aPdkjL6cKGzJLQSUvuUq-q0yH",
+    "client_secret": "EGaZjf-dqk2tYaCiw6iKkUDFE5h9zk6Ept3f6TQa4a1aMwQTobLGf1HHZ0-J1uSmKm6EY819IN0JMo1r",
+    "paypalCartDescription": "oliprice.com",
     "paypalCurrency": "USD"
 }
