@@ -145,8 +145,12 @@
                         {{/isNull}}
                     {{/if}}        
       </div>
-    </div>
-
+    </div>  
+            {{#if totalProductCount}}          
+            <div class="well well-sm hidden-xs">{{totalProductCount}} different essential oils available</div> 
+            {{else}}
+            <div class="well well-sm hidden-xs">Worldwide delivery. Order tracking. Secure payments.</div>
+            {{/if}}
     
     <!-- Put any utility content here, such as social icons -->
     <div class="l24-bar__utilities">
