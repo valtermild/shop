@@ -49,7 +49,7 @@ router.post('/customer/create', (req, res) => {
             }
 
             // Customer creation successful
-            req.session.customer = newCustomer.ops[0];
+            req.session.customer = newCustomer.ops[0];            
             res.status(200).json({
                 message: 'Successfully logged in',
                 customer: newCustomer

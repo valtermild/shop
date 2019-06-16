@@ -660,7 +660,7 @@ $(document).ready(function (){
         e.preventDefault();
         let $target = $( $(e.currentTarget).attr('data-target') );
         $target.animate({height: 'toggle'}, 300);
-      });
+      });          
 });
 
 function deleteFromCart(element){
