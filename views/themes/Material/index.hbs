@@ -23,9 +23,9 @@
                             <a href="/product/{{this.productPermalink}}">
                                 <div class="vertical-center thumbnail-image-container">
                                     {{#if productImage}}
-                                        <img class="img-responsive lazyload" src="/uploads/loader.gif" data-src="{{this.productImage}}" alt="...">
+                                        <img class="img-responsive lazyload" src="/uploads/loader.gif" data-src="{{this.productImage}}" alt="{{this.productTitle}}">
                                     {{else}}
-                                        <img class="img-responsive" src="/uploads/placeholder.png" alt="...">
+                                        <img class="img-responsive" src="/uploads/placeholder.png" alt="{{this.productTitle}}">
                                     {{/if}}
                                 </div>
                                 <h3 class="product-title product-title-home top-pad-10">
