@@ -859,8 +859,7 @@ a {
     min-height: 24px;
     margin-bottom: 5px;
     transition: all 0.3s;
-    transition-timing-function: cubic-bezier(0.09, 0.68, 0, 0.99);
-    z-index: 2000;
+    transition-timing-function: cubic-bezier(0.09, 0.68, 0, 0.99);    
   }
   .l24-bar:before, .l24-bar:after {
     content: '';
@@ -873,8 +872,7 @@ a {
   .l24-bar--pos-fixed-top,
   .l24-bar--pos-fixed-bottom {
     position: fixed;
-    margin-bottom: 0;
-    z-index: 2010;
+    margin-bottom: 0;    
   }
   
   .l24-bar--pos-fixed-top {
@@ -949,11 +947,12 @@ a {
   
   .l24-bar__collapse {
     display: none;
-    margin: 0;
+    margin: 0 0 20px 0;
     flex: 1 1 100%;
     order: 99;
     transition: padding 0.3s;
     border-top: 1px solid rgba(204, 204, 204, 0.4);
+    border-bottom: 1px solid rgba(204, 204, 204, 0.4);
   }
   @media (min-width: 768px) {
     .l24-bar__collapse {
