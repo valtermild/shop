@@ -240,8 +240,8 @@ app.use(session({
 }));
 
 // serving static content
-app.use(express.static(path.join(__dirname, 'public')));
-app.use(express.static(path.join(__dirname, 'views', 'themes')));
+app.use(express.static(path.join(__dirname, 'public'),{maxAge: '1d'}));
+app.use(express.static(path.join(__dirname, 'views', 'themes'),{maxAge: '1d'}));
 
 // Make stuff accessible to our router
 app.use((req, res, next) => {
