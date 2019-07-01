@@ -9,7 +9,7 @@ const router = express.Router();
 router.get('/admin/products', common.restrict, (req, res, next) => {
     const db = req.app.db;
     // get the top results
-    db.products.find({}).sort({'productAddedDate': -1}).limit(10).toArray((err, topResults) => {
+    db.products.find({}).sort({'productAddedDate': -1}).limit(50).toArray((err, topResults) => {
         if(err){
             console.info(err.stack);
         }
