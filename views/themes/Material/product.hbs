@@ -100,3 +100,20 @@
     </div>
 </div>
 <input type="hidden" id="productId" value="{{result._id}}">
+<script type="application/ld+json">
+            {
+                "@context": "http://schema.org",
+                "@type": "Product",
+                "name": "{{result.productTitle}}",
+                "image": "{{result.productImage}}",
+                "description": "{{productDescription}}",
+                "productID": "{{result._id}}",
+                "offers": {
+                    "@type": "Offer",
+                    "availability": "http://schema.org/InStock",
+                    "price": "{{result.productPrice}}",
+                    "priceCurrency": "USD",
+                    "itemCondition": "https://schema.org/NewCondition",
+                },
+            }
+</script>
