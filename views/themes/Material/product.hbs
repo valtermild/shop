@@ -1,6 +1,28 @@
 {{> themes/Material/front-menu}}
 <div class="product-layout s12 col m8 offset-m2">
     <div class="row">
+        <div class="col s12 m10 l5 pull-left">
+            {{#if result.productImage}}
+                <div class="title-image-container">
+                    <div class="image-prev image-button"> <i class="fa fa-chevron-left" aria-hidden="true"></i></div>
+                    <img src="{{result.productImage}}" id="product-title-image" class="product-title-image img-responsive materialboxed" alt="{{result.productTitle}}">
+                    <div class="image-next image-button"> <i class="fa fa-chevron-right" aria-hidden="true"></i></div>
+                </div>
+            {{else}}
+                <div class="title-image-container">
+                    <img src="/uploads/placeholder.png" id="product-title-image" class="product-title-image img-responsive" alt="...">
+                </div>
+            {{/if}}
+            {{#ifCond images.length '>' 1}}
+                <div class="product-image-container">
+                {{#each images}}
+                    <div class="vertical-center top-pad-20 col s6 l6 xl6">
+                        <img src="{{this.path}}" class="thumbnail-image img-responsive">
+                    </div>
+                {{/each}}
+                </div>
+            {{/ifCond}}
+        </div>
         <div class="col s10 m10 l5 pull-right">
             <div class="row">
             <h1 class="col s10 m10 product-title">{{result.productTitle}}</h1>
@@ -75,28 +97,7 @@
             {{/if}}
             </div>
         </div>
-        <div class="col s12 m10 l5 pull-left">
-            {{#if result.productImage}}
-                <div class="title-image-container">
-                    <div class="image-prev image-button"> <i class="fa fa-chevron-left" aria-hidden="true"></i></div>
-                    <img src="{{result.productImage}}" id="product-title-image" class="product-title-image img-responsive materialboxed" alt="{{result.productTitle}}">
-                    <div class="image-next image-button"> <i class="fa fa-chevron-right" aria-hidden="true"></i></div>
-                </div>
-            {{else}}
-                <div class="title-image-container">
-                    <img src="/uploads/placeholder.png" id="product-title-image" class="product-title-image img-responsive" alt="...">
-                </div>
-            {{/if}}
-            {{#ifCond images.length '>' 1}}
-                <div class="product-image-container">
-                {{#each images}}
-                    <div class="vertical-center top-pad-20 col s6 l6 xl6">
-                        <img src="{{this.path}}" class="thumbnail-image img-responsive">
-                    </div>
-                {{/each}}
-                </div>
-            {{/ifCond}}
-        </div>
+        
     </div>
 </div>
 <input type="hidden" id="productId" value="{{result._id}}">
