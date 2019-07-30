@@ -573,7 +573,7 @@ a {
     }
 
     .product-title{
-        padding-top: 25px;
+        padding-top: 25px !important;
         min-height: auto;
     }
 
